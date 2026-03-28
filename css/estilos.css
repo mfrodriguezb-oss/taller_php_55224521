@@ -1,0 +1,96 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo general */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f3e8ff, #ede9fe);
+    min-height: 100vh;
+    padding: 40px;
+    color: #2d1e3e;
+}
+
+/* Contenedor central */
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.15);
+}
+
+/* Títulos */
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #6d28d9;
+}
+
+/* Formularios */
+form {
+    margin-top: 20px;
+}
+
+/* Inputs y selects */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #c4b5fd;
+    font-size: 14px;
+}
+
+/* Botones */
+button {
+    width: 100%;
+    background: #8b5cf6;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #7c3aed;
+}
+
+/* Resultados */
+.resultado {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f5f3ff;
+    border-left: 4px solid #8b5cf6;
+    border-radius: 8px;
+}
+
+/* Listas (historial, menú, etc.) */
+ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+li {
+    padding: 8px 0;
+    text-align: center;
+}
+
+/* Enlaces */
+a {
+    text-decoration: none;
+    color: #7c3aed;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -30,6 +30,8 @@ if (isset($_POST['borrar'])) {
     <meta charset="UTF-8">
     <title>Calculadora</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+
 </head>
 <body>
 

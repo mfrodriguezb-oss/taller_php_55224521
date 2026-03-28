@@ -4,11 +4,11 @@ class Calculadora
 {
     public function factorial($n)
     {
-        $resultado = 1;
+        $res = 1;
         for ($i = 1; $i <= $n; $i++) {
-            $resultado *= $i;
+            $res *= $i;
         }
-        return $resultado;
+        return $res;
     }
 
     public function fibonacci($n)
@@ -23,7 +23,6 @@ class Calculadora
             $a = $b;
             $b = $temp;
         }
-
         return $serie;
     }
 }

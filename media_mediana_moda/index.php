@@ -21,6 +21,8 @@ if ($_POST) {
 <head>
     <meta charset="UTF-8">
     <title>Media, Mediana y Moda</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+
 </head>
 <body>
 

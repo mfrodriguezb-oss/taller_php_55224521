@@ -16,6 +16,8 @@ if ($_POST) {
 <head>
     <meta charset="UTF-8">
     <title>Conversión a Binario</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+
 </head>
 <body>
 

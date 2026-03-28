@@ -1,18 +1,20 @@
 <?php
-require 'Estadistica.php';
+require 'Calculadora.php';
 
 $resultado = '';
 
-if ($_POST) {
-    $entrada = $_POST['numeros'];
-    $numeros = array_map('floatval', explode(',', $entrada));
+if (isset($_POST['numero']) && isset($_POST['operacion'])) {
+    $numero = (int) $_POST['numero'];
+    $operacion = $_POST['operacion'];
 
-    $est = new Estadistica();
+    $calc = new Calculadora();
 
-    $resultado = "
-        Media: " . $est->media($numeros) . "<br>
-        Mediana: " . $est->mediana($numeros) . "<br>
-        Moda: " . $est->moda($numeros);
+    if ($operacion === 'factorial') {
+        $resultado = "Factorial de $numero: " . $calc->factorial($numero);
+    } else {
+        $serie = $calc->fibonacci($numero);
+        $resultado = "Serie Fibonacci: " . implode(', ', $serie);
+    }
 }
 ?>
 
@@ -20,20 +22,29 @@ if ($_POST) {
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Media, Mediana y Moda</title>
+    <title>Fibonacci y Factorial</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+
 </head>
 <body>
 
-<h2>Media, Mediana y Moda</h2>
+<h2>Fibonacci y Factorial</h2>
 
 <form method="post">
-    <label>Ingrese números separados por coma:</label><br>
-    <input type="text" name="numeros" placeholder="Ej: 2,3,4,4,5" required><br><br>
+    <label>Número:</label><br>
+    <input type="number" name="numero" min="0" required><br><br>
+
+    <label>Operación:</label><br>
+    <select name="operacion" required>
+        <option value="fibonacci">Fibonacci</option>
+        <option value="factorial">Factorial</option>
+    </select><br><br>
+
     <button type="submit">Calcular</button>
 </form>
 
-<?php if ($resultado): ?>
-    <p><?= $resultado ?></p>
+<?php if ($resultado !== ''): ?>
+    <p><strong><?= $resultado ?></strong></p>
 <?php endif; ?>
 
 </body>
