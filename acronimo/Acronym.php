@@ -1,6 +1,6 @@
 <?php
 
-class Acronimo
+class Acronym
 {
     public function generar($frase)
     {

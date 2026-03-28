@@ -1,5 +1,5 @@
 <?php
-require 'Acronimo.php';
+require 'Acronym.php';
 $resultado = '';
 
 if ($_POST) {
