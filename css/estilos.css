@@ -1,11 +1,11 @@
-/* Reset básico */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Fondo general */
+
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background: linear-gradient(135deg, #f3e8ff, #ede9fe);
@@ -14,7 +14,7 @@ body {
     color: #2d1e3e;
 }
 
-/* Contenedor central */
+
 .container {
     max-width: 600px;
     margin: auto;
@@ -24,19 +24,19 @@ body {
     box-shadow: 0 8px 20px rgba(124, 58, 237, 0.15);
 }
 
-/* Títulos */
+
 h1, h2, h3 {
     text-align: center;
     margin-bottom: 20px;
     color: #6d28d9;
 }
 
-/* Formularios */
+
 form {
     margin-top: 20px;
 }
 
-/* Inputs y selects */
+
 input, select {
     width: 100%;
     padding: 10px;
@@ -47,7 +47,7 @@ input, select {
     font-size: 14px;
 }
 
-/* Botones */
+
 button {
     width: 100%;
     background: #8b5cf6;
@@ -64,7 +64,7 @@ button:hover {
     background: #7c3aed;
 }
 
-/* Resultados */
+
 .resultado {
     margin-top: 20px;
     padding: 15px;
@@ -73,7 +73,7 @@ button:hover {
     border-radius: 8px;
 }
 
-/* Listas (historial, menú, etc.) */
+
 ul {
     list-style: none;
     margin-top: 20px;
@@ -84,7 +84,7 @@ li {
     text-align: center;
 }
 
-/* Enlaces */
+
 a {
     text-decoration: none;
     color: #7c3aed;
