@@ -71,4 +71,5 @@ class ArbolBinario
         $this->postorden($n->der, $r);
         $r[] = $n->valor;
     }
+    
 }

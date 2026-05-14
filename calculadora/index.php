@@ -36,6 +36,7 @@ if (isset($_POST['borrar'])) {
 <body>
 
 <h2>Calculadora</h2>
+<a href="../index.php" class="btn-volver">⬅ Volver al menú</a>
 
 <form method="post">
     <input type="number" step="any" name="num1" required>

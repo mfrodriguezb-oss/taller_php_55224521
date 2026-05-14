@@ -19,7 +19,13 @@ if ($_POST) {
 <body>
 
 <h2>Generador de Acrónimos</h2>
+
+
 <a href="../index.php" class="btn-volver">⬅ Volver al menú</a>
+
+
+
+<h4> Por favor ingresa las palabras para generar el acrónimo</h4>
 
 <form method="post">
     <input type="text" name="frase" required>

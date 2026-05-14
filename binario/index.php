@@ -22,6 +22,7 @@ if ($_POST) {
 <body>
 
 <h2>Convertir número a binario</h2>
+<a href="../index.php" class="btn-volver">⬅ Volver al menú</a>
 
 <form method="post">
     <label>Número entero:</label><br>

@@ -1,7 +1,7 @@
 <?php
 require 'ArbolBinario.php';
 
-$resultado = $error = '';
+$resultado = $error = ''
 
 if ($_POST) {
 
@@ -45,7 +45,7 @@ if ($_POST) {
 <body>
 
 <h2>Árbol Binario </h2>
-
+<a href="../index.php" class="btn-volver">⬅ Volver al menú</a>
 <form method="post">
     <label>Preorden:</label><br>
     <input type="text" name="preorden"><br><br>
@@ -64,7 +64,13 @@ if ($_POST) {
 <?php endif; ?>
 
 <?php if ($resultado): ?>
-    <p><?= $resultado ?></p>
+
+    <div class="resultado">
+        <p><?= $resultado ?></p>
+    </div>
+
+
+
 <?php endif; ?>
 
 </body>

@@ -29,7 +29,7 @@ if (isset($_POST['numero']) && isset($_POST['operacion'])) {
 <body>
 
 <h2>Fibonacci y Factorial</h2>
-
+<a href="../index.php" class="btn-volver">⬅ Volver al menú</a>
 <form method="post">
     <label>Número:</label><br>
     <input type="number" name="numero" min="0" required><br><br>

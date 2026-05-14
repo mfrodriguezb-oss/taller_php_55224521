@@ -94,3 +94,19 @@ a {
 a:hover {
     text-decoration: underline;
 }
+.arbol ul {
+    list-style: none;
+    padding-left: 25px;
+}
+
+.arbol li {
+    margin: 6px 0;
+    font-weight: bold;
+    position: relative;
+}
+
+.arbol li::before {
+    content: "└─ ";
+    color: #6a0dad;
+    font-weight: bold;
+}
