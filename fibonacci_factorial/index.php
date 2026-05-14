@@ -30,6 +30,8 @@ if (isset($_POST['numero']) && isset($_POST['operacion'])) {
 
 <h2>Fibonacci y Factorial</h2>
 <a href="../index.php" class="btn-volver">⬅ Volver al menú</a>
+<div class="card-global"> 
+
 <form method="post">
     <label>Número:</label><br>
     <input type="number" name="numero" min="0" required><br><br>
@@ -46,6 +48,6 @@ if (isset($_POST['numero']) && isset($_POST['operacion'])) {
 <?php if ($resultado !== ''): ?>
     <p><strong><?= $resultado ?></strong></p>
 <?php endif; ?>
-
+</div>
 </body>
 </html>

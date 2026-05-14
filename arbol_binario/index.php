@@ -46,6 +46,8 @@ if ($_POST) {
 
 <h2>Árbol Binario </h2>
 <a href="../index.php" class="btn-volver">⬅ Volver al menú</a>
+<div class="card-global"> 
+
 <form method="post">
     <label>Preorden:</label><br>
     <input type="text" name="preorden"><br><br>
@@ -72,6 +74,6 @@ if ($_POST) {
 
 
 <?php endif; ?>
-
+</div>
 </body>
 </html>

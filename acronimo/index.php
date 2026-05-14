@@ -23,7 +23,7 @@ if ($_POST) {
 
 <a href="../index.php" class="btn-volver">⬅ Volver al menú</a>
 
-
+<div class="card-global"> 
 
 <h4> Por favor ingresa las palabras para generar el acrónimo</h4>
 
@@ -35,6 +35,6 @@ if ($_POST) {
 <?php if ($resultado): ?>
 <p>Acrónimo: <strong><?= $resultado ?></strong></p>
 <?php endif; ?>
-
+</div>
 </body>
 </html>

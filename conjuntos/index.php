@@ -37,6 +37,8 @@ if ($_POST) {
 
 <h2>Operaciones con Conjuntos</h2>
 <a href="../index.php" class="btn-volver">⬅ Volver al menú</a>
+<div class="card-global"> 
+
 
 <form method="post">
     <label>Conjunto A (por favor separa por comas):</label><br>
@@ -51,6 +53,6 @@ if ($_POST) {
 <?php if ($resultado): ?>
     <p><?= $resultado ?></p>
 <?php endif; ?>
-
+</div>
 </body>
 </html>

@@ -1,22 +1,18 @@
-/* RESET GENERAL */
+/* RESET Y FUENTE */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* FONDO MORADO LILA CON BRILLITOS */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* Color base morado lila más vibrante para que resalten los brillos */
+    font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(135deg, #d8b4fe 0%, #c084fc 50%, #d8b4fe 100%);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
     min-height: 100vh;
-    padding: 40px;
+    padding: 20px;
     color: #2e1065;
-    position: relative;
-    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,23 +24,17 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* CAPA DE BRILLITOS (SPARKLES) */
+/* BRILLITOS */
 body::before {
     content: "";
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0; width: 100%; height: 100%;
     pointer-events: none;
-    /* Estrellitas blancas */
     background-image: 
         radial-gradient(circle, #ffffff 1.5px, transparent 1.5px),
         radial-gradient(circle, #ffffff 1px, transparent 1px);
     background-size: 80px 80px, 130px 130px;
-    background-position: 0 0, 40px 40px;
     animation: sparkles 5s linear infinite;
-    z-index: 1; /* Para que estén sobre el fondo */
 }
 
 @keyframes sparkles {
@@ -53,89 +43,72 @@ body::before {
     100% { transform: translateY(-100px); opacity: 0.2; }
 }
 
-/* TÍTULOS SUPER GRANDES */
+/* TÍTULOS */
 h1, h2 {
-    font-size: 3.5rem;
-    text-align: center;
-    margin-bottom: 25px;
-    color: #ffffff; /* Blanco para que resalte en el fondo lila */
+    font-size: 3rem;
+    color: #ffffff;
     text-shadow: 3px 3px 6px rgba(107, 33, 168, 0.5);
-    z-index: 2;
-}
-
-/* CONTENEDOR TIPO CRISTAL (Para ver los brillitos detrás) */
-.container, body > h2 + a + form, .resultado, div[style*="background: #ffffff"] {
-    width: 100%;
-    max-width: 600px;
-    /* Fondo lila muy clarito y semi-transparente */
-    background: rgba(255, 255, 255, 0.3); 
-    padding: 40px;
-    border-radius: 30px;
-    backdrop-filter: blur(10px); /* Efecto de vidrio esmerilado */
-    -webkit-backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-    z-index: 2;
-    margin: 20px auto;
-}
-
-/* ESTILOS DE LOS ENLACES DEL MENÚ */
-ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-li a {
-    display: block;
+    margin-bottom: 20px;
     text-align: center;
-    text-decoration: none;
-    background: rgba(255, 255, 255, 0.6);
-    color: #6b21a8 !important;
-    padding: 15px 20px;
-    border-radius: 15px;
-    font-weight: bold;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
+}
+
+/* LA TARJETA CONTENEDORA (Esto organizará tu texto) */
+.card-global {
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 40px;
+    border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* FORMULARIOS ESTÉTICOS */
+form { display: flex; flex-direction: column; gap: 15px; }
+
+label { font-weight: 600; color: #4c1d95; }
+
+input {
+    padding: 12px;
+    border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
 }
 
-li a:hover {
-    background: #ffffff;
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(168, 85, 247, 0.4);
-}
-
-/* BOTONES Y INPUTS (Para las otras páginas) */
 button {
     background: #7e22ce;
     color: white;
     padding: 15px;
-    border-radius: 15px;
+    border-radius: 12px;
     border: none;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-button:hover {
-    background: #6b21a8;
-    transform: translateY(-2px);
+button:hover { background: #6b21a8; transform: translateY(-2px); }
+
+/* RESULTADOS ORGANIZADOS */
+.resultado {
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    border-left: 8px solid #a855f7;
+    line-height: 1.6;
 }
 
-input {
-    padding: 12px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    background: rgba(255, 255, 255, 0.9);
-}
-
+/* ENLACE VOLVER */
 .btn-volver {
-    color: #ffffff;
+    color: white;
     text-decoration: none;
     font-weight: bold;
+    background: rgba(0,0,0,0.1);
+    padding: 8px 15px;
+    border-radius: 10px;
     margin-bottom: 10px;
-    z-index: 2;
 }

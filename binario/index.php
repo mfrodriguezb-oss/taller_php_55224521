@@ -23,6 +23,7 @@ if ($_POST) {
 
 <h2>Convertir número a binario</h2>
 <a href="../index.php" class="btn-volver">⬅ Volver al menú</a>
+<div class="card-global"> 
 
 <form method="post">
     <label>Número entero:</label><br>
@@ -33,6 +34,6 @@ if ($_POST) {
 <?php if ($resultado !== ''): ?>
     <p><strong>Binario:</strong> <?= $resultado ?></p>
 <?php endif; ?>
-
+</div>
 </body>
 </html>

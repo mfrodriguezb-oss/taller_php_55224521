@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Taller PHP - Menú Principal</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estilos.css?v=999">
 </head>
 <body>
 
