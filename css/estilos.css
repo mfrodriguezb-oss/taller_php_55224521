@@ -5,28 +5,30 @@
     box-sizing: border-box;
 }
 
-/* EFECTO DE BRILLITOS EN EL FONDO */
+/* FONDO MORADO LILA CON BRILLITOS */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* Gradiente morado pastel */
-    background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 50%, #f3e8ff 100%);
+    /* Color base morado lila más vibrante para que resalten los brillos */
+    background: linear-gradient(135deg, #d8b4fe 0%, #c084fc 50%, #d8b4fe 100%);
     background-size: 400% 400%;
-    animation: gradientBG 10s ease infinite;
+    animation: gradientBG 15s ease infinite;
     min-height: 100vh;
     padding: 40px;
-    color: #4a3a61;
+    color: #2e1065;
     position: relative;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Animación del fondo */
 @keyframes gradientBG {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-/* LOS BRILLITOS (Sparkles) */
+/* CAPA DE BRILLITOS (SPARKLES) */
 body::before {
     content: "";
     position: fixed;
@@ -35,127 +37,105 @@ body::before {
     width: 100%;
     height: 100%;
     pointer-events: none;
+    /* Estrellitas blancas */
     background-image: 
-        radial-gradient(circle, #fff 1px, transparent 1px),
-        radial-gradient(circle, #fff 1px, transparent 1px);
-    background-size: 100px 100px, 150px 150px;
-    background-position: 0 0, 50px 50px;
-    animation: sparkles 4s linear infinite;
-    opacity: 0.6;
+        radial-gradient(circle, #ffffff 1.5px, transparent 1.5px),
+        radial-gradient(circle, #ffffff 1px, transparent 1px);
+    background-size: 80px 80px, 130px 130px;
+    background-position: 0 0, 40px 40px;
+    animation: sparkles 5s linear infinite;
+    z-index: 1; /* Para que estén sobre el fondo */
 }
 
 @keyframes sparkles {
-    0% { transform: translateY(0); opacity: 0.3; }
-    50% { opacity: 0.8; }
-    100% { transform: translateY(-50px); opacity: 0.3; }
+    0% { transform: translateY(0); opacity: 0.2; }
+    50% { opacity: 0.7; }
+    100% { transform: translateY(-100px); opacity: 0.2; }
 }
 
-/* TÍTULOS GRANDES */
+/* TÍTULOS SUPER GRANDES */
 h1, h2 {
-    font-size: 3rem; /* Tamaño mucho más grande */
+    font-size: 3.5rem;
     text-align: center;
-    margin-bottom: 30px;
-    color: #7e22ce; /* Morado fuerte pero pastel */
-    text-shadow: 2px 2px 4px rgba(168, 85, 247, 0.3);
-    letter-spacing: -1px;
+    margin-bottom: 25px;
+    color: #ffffff; /* Blanco para que resalte en el fondo lila */
+    text-shadow: 3px 3px 6px rgba(107, 33, 168, 0.5);
+    z-index: 2;
 }
 
-h3 {
-    font-size: 1.8rem;
-    color: #9333ea;
-    margin-bottom: 15px;
-}
-
-/* CONTENEDOR PRINCIPAL */
-.container, body > h2 + a + form, .resultado {
-    max-width: 650px;
+/* CONTENEDOR TIPO CRISTAL (Para ver los brillitos detrás) */
+.container, body > h2 + a + form, .resultado, div[style*="background: #ffffff"] {
+    width: 100%;
+    max-width: 600px;
+    /* Fondo lila muy clarito y semi-transparente */
+    background: rgba(255, 255, 255, 0.3); 
+    padding: 40px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px); /* Efecto de vidrio esmerilado */
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    z-index: 2;
     margin: 20px auto;
-    background: rgba(255, 255, 255, 0.85); /* Blanco semi-transparente */
-    padding: 30px;
-    border-radius: 20px;
-    backdrop-filter: blur(5px); /* Efecto cristalizado */
-    box-shadow: 0 10px 25px rgba(168, 85, 247, 0.2);
-    border: 2px solid #f3e8ff;
 }
 
-/* FORMULARIO Y ENTRADAS */
-form {
+/* ESTILOS DE LOS ENLACES DEL MENÚ */
+ul {
+    list-style: none;
     display: flex;
     flex-direction: column;
+    gap: 15px;
 }
 
-label {
-    font-weight: bold;
-    color: #6b21a8;
-    margin-bottom: 5px;
-}
-
-input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border-radius: 12px;
-    border: 2px solid #e9d5ff;
-    background: #faf5ff;
-    transition: all 0.3s ease;
-}
-
-input:focus {
-    outline: none;
-    border-color: #c084fc;
-    box-shadow: 0 0 8px rgba(192, 132, 252, 0.4);
-}
-
-/* BOTÓN MODERNO */
-button {
-    width: 100%;
-    background: #a855f7;
-    color: white;
-    border: none;
-    padding: 15px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
-}
-
-button:hover {
-    background: #9333ea;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(168, 85, 247, 0.4);
-}
-
-/* CAJA DE RESULTADOS */
-.resultado {
-    background: #fdf4ff;
-    border-left: 6px solid #d8b4fe;
-    line-height: 1.8;
-    font-size: 1.1rem;
-}
-
-.resultado strong {
-    color: #7e22ce;
-}
-
-/* ENLACE VOLVER */
-.btn-volver {
+li a {
     display: block;
     text-align: center;
     text-decoration: none;
-    color: #a855f7;
+    background: rgba(255, 255, 255, 0.6);
+    color: #6b21a8 !important;
+    padding: 15px 20px;
+    border-radius: 15px;
     font-weight: bold;
-    margin-bottom: 20px;
-    transition: color 0.3s;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
-.btn-volver:hover {
-    color: #6b21a8;
+li a:hover {
+    background: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(168, 85, 247, 0.4);
 }
 
-/* PERSONALIZACIÓN EXTRA */
-::selection {
-    background: #f5d0fe;
-    color: #701a75;
+/* BOTONES Y INPUTS (Para las otras páginas) */
+button {
+    background: #7e22ce;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #6b21a8;
+    transform: translateY(-2px);
+}
+
+input {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.btn-volver {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    z-index: 2;
 }
