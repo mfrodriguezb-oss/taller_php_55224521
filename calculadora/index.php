@@ -29,7 +29,6 @@ if (isset($_POST['borrar'])) {
 <head>
     <meta charset="UTF-8">
     <title>Calculadora</title>
-    <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="../css/estilos.css">
 
 </head>
@@ -37,9 +36,7 @@ if (isset($_POST['borrar'])) {
 
 <h2>Calculadora</h2>
 <a href="../index.php" class="btn-volver">⬅ Volver al menú</a>
-<div class="card-global"> 
-
-
+<div class="card-global">
 <form method="post">
     <input type="number" step="any" name="num1" required>
     
@@ -57,7 +54,7 @@ if (isset($_POST['borrar'])) {
 </form>
 
 <?php if ($resultado !== ''): ?>
-    <p><strong>Resultado:</strong> <?= $resultado ?></p>
+    <div class="resultado"><strong>Resultado:</strong> <?= $resultado ?></div>
 <?php endif; ?>
 
 <h3>Historial</h3>

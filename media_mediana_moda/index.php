@@ -28,15 +28,17 @@ if ($_POST) {
 
 <h2>Media, Mediana y Moda</h2>
 <a href="../index.php" class="btn-volver">⬅ Volver al menú</a>
-<form method="post">
-    <label>Ingrese números separados por coma:</label><br>
-    <input type="text" name="numeros" placeholder="Ej: 2,3,4,4,5" required><br><br>
-    <button type="submit">Calcular</button>
-</form>
+<div class="card-global">
+    <form method="post">
+        <label>Ingrese números separados por coma:</label><br>
+        <input type="text" name="numeros" placeholder="Ej: 2,3,4,4,5" required><br><br>
+        <button type="submit">Calcular</button>
+    </form>
 
-<?php if ($resultado): ?>
-    <p><?= $resultado ?></p>
-<?php endif; ?>
+    <?php if ($resultado): ?>
+        <div class="resultado"><?= $resultado ?></div>
+    <?php endif; ?>
+</div> 
 
 </body>
 </html>
