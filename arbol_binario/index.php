@@ -1,7 +1,7 @@
 <?php
 require 'ArbolBinario.php';
 
-$resultado = $error = ''
+$resultado = $error = '';
 
 if ($_POST) {
 
